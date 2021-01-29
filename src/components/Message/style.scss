@@ -1,0 +1,100 @@
+.message{
+    i{
+        font-size: 16px;
+        transform: translatey(4px);
+    }
+    &__content{
+        max-width: 85%;
+        padding: 10px;
+        margin: 3px;
+        display: inline-block;
+    }
+    &__text{
+        text-align: left;
+        display: inline-block;
+        color: white;
+        position: relative;
+    }
+    &__attachments{
+        display: flex;
+        flex-wrap: wrap;
+        
+        &-item{
+            margin-right: 5px;
+            margin-bottom: 5px;
+            width: 100px;
+            height: 100px;
+            img{
+                border-radius: 10px;
+            }
+        }
+    }
+    &__time{
+        &_shadow{
+            user-select: none;
+            color: rgba(0,0,0,0,)
+        }
+        &_real{
+            user-select: none;
+            color: #ccc;
+            font-size: 12px;
+            margin-left: 10px;
+            position: absolute;
+            bottom: 0%;
+            right: 0;
+            transform: translatey(7px);
+            display: inline-block;
+        }
+    }
+}
+.message__isMe{
+    text-align: right;
+    .message__content{
+        background: #03a9f4;
+        border-radius: 8px 8px 0px 8px;
+
+    }
+}
+.message__isntMe{
+    .message__content{
+        background: #039be5;
+        border-radius: 8px 8px 8px 0px;
+    }
+}
+.message__typing{
+    position: absolute;
+    i{
+        display: none;
+    }
+    // bottom: -10px;
+    .message__content{
+        // color: black;
+        // background: #000;
+        background: none;
+        padding: 0px;
+        margin: 0;
+    }
+    .message__text{
+        color: grey;
+        // height: 20px;
+        // border: 1px solid red;  
+    }
+}
+.message__oneAttachments{
+    .message__content{
+        width: 85%;
+    }
+    .message__text{
+        width: 100%;
+    }
+    .message__attachments{
+        &-item{
+            margin: 0;
+            height: auto;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}

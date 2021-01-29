@@ -1,0 +1,85 @@
+.dialog{
+    display: flex;
+    padding: 5px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #80d8ff;
+    cursor: pointer;
+    position: relative;
+    &:hover{
+        background: darken(#f0f0f0, 10%);
+        .online{
+            border-color: darken(#f0f0f0, 10%);
+        }
+    }
+    &__ava{
+        width: 50px;
+        height: 50px;
+        position: relative;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+        .online{
+            position: absolute;
+            background: rgb(47, 255, 64);
+            width: 12px;
+            height: 12px;
+            border-radius: 100px;
+            bottom: 1px;
+            right: 1px;
+            border:2px solid #f0f0f0;
+        }
+    }
+    &__content{
+        width: 270px;
+        &-fullname{
+            display: flex;
+            justify-content: space-between;
+            p{
+                padding: 0;
+                font-weight: 500;
+                margin: 0 0 0 5px;
+                max-width: 80%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            span{
+                color: grey;
+                font-size: 12px;
+                position: absolute;
+                right: 3px;
+                top: 0px;
+                // transform: translatey(-5px);
+            }
+        }
+        &-text{
+            display: flex;
+            justify-content: space-between;
+            p{
+                padding: 0;
+                margin: 0 0 0 5px;
+                max-width: 85%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap; 
+            }
+            span{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                background: orange;
+                color: white;
+                font-weight: 500;
+                margin: auto 0;
+                font-size: 12px;
+                width: 25px;
+                height: 25px;
+                border-radius: 100px;
+            }
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+}

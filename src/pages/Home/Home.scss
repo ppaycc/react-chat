@@ -1,0 +1,37 @@
+.home{
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    max-height: calc(100vh - 10px);
+    grid-template-columns: 2fr 4fr;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+    .message-bar, .dialogs-bar{
+        max-height: calc(100vh - 10px); 
+        overflow: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        /* Трек поле скроллбара */
+        &::-webkit-scrollbar-track {
+            // box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            background: rgba(0,0,0,0);
+        }
+        
+        /* Ползунок скроллбара */
+        &::-webkit-scrollbar-thumb {
+            // box-shadow: inset 0 0 6px rgba(198, 21, 21, 1); 
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+        }
+    }
+    .dialogs-bar{
+        display: block;
+        border-right: 1px solid black;
+
+    }
+}
